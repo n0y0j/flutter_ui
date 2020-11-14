@@ -52,19 +52,6 @@ class TitlePriceRating extends StatelessWidget {
   }
 }
 
-Row shopName({String name}) {
-  return Row(
-    children: <Widget>[
-      Icon(
-        Icons.location_on,
-        color: ksecondaryColor,
-      ),
-      SizedBox(width: 10),
-      Text(name)
-    ],
-  );
-}
-
 ClipPath priceTag(BuildContext context, {int price}) {
   return ClipPath(
     clipper: PricerCliper(),
