@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_ordering_app/constants.dart';
 import 'package:food_ordering_app/screens/details/components/app_bar.dart';
 import 'package:food_ordering_app/screens/details/components/item_image.dart';
+import 'package:food_ordering_app/screens/details/components/title_price_rating.dart';
 
 class DetailsScreen extends StatelessWidget {
   @override
@@ -50,21 +51,15 @@ class ItemInfo extends StatelessWidget {
       child: Column(
         children: <Widget>[
           shopName(name: "MacDonalds"),
+          TitlePriceRating(
+            name: "Cheese Burger",
+            numOfReviews: 24,
+            rating: 4,
+            price: 15,
+            onRatingChanged: (value) {},
+          ),
         ],
       ),
     );
   }
-}
-
-Row shopName({String name}) {
-  return Row(
-    children: <Widget>[
-      Icon(
-        Icons.location_on,
-        color: ksecondaryColor,
-      ),
-      SizedBox(width: 10),
-      Text(name)
-    ],
-  );
 }
