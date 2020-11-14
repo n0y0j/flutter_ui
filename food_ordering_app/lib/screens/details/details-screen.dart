@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/constants.dart';
 import 'package:food_ordering_app/screens/details/components/app_bar.dart';
+import 'package:food_ordering_app/screens/details/components/item_image.dart';
 
 class DetailsScreen extends StatelessWidget {
   @override
@@ -21,37 +22,49 @@ class Body extends StatelessWidget {
         ItemImage(
           imaSrc: "assets/images/burger.png",
         ),
-        Container(
-          padding: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30),
-            ),
-          ),
+        Expanded(
+          child: ItemInfo(),
         )
       ],
     );
   }
 }
 
-class ItemImage extends StatelessWidget {
-  final String imaSrc;
-  const ItemImage({
+class ItemInfo extends StatelessWidget {
+  const ItemInfo({
     Key key,
-    this.imaSrc,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Image.asset(
-      imaSrc,
-      height: size.height * 0.25,
-      // it cover the 25% of total height
+    return Container(
+      padding: EdgeInsets.all(20),
       width: double.infinity,
-      fit: BoxFit.fill,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),
+      child: Column(
+        children: <Widget>[
+          shopName(name: "MacDonalds"),
+        ],
+      ),
     );
   }
+}
+
+Row shopName({String name}) {
+  return Row(
+    children: <Widget>[
+      Icon(
+        Icons.location_on,
+        color: ksecondaryColor,
+      ),
+      SizedBox(width: 10),
+      Text(name)
+    ],
+  );
 }
