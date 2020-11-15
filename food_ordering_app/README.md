@@ -1,16 +1,16 @@
-# food_ordering_app
+# Food Ordering App
+<br/>
 
-A new Flutter project.
+**Reference this site**
+* https://www.youtube.com/watch?v=F0ujC60wHwc
+<br/>
 
-## Getting Started
+## Library Used
 
-This project is a starting point for a Flutter application.
+* flutter_svg: ^0.19.1<br/>
+* smooth_star_rating: ^1.1.1
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+## Design
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/28584258/99184628-ad825480-2787-11eb-9bbf-01d6351225b0.png" alt="Screenshot_1605442444" width="33%" height="33%" /> <img src="https://user-images.githubusercontent.com/28584258/99184629-af4c1800-2787-11eb-8da8-5bf5359a5910.png" alt="Screenshot_1605442449" width="33%" height="33%" />
