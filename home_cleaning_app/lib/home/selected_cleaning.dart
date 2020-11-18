@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:home_cleaning_app/components/cleaning_card.dart';
 
-class SelectedCleaning extends StatelessWidget {
+class SelectedCleaning extends StatefulWidget {
   const SelectedCleaning({
     Key key,
   }) : super(key: key);
 
+  @override
+  _SelectedCleaningState createState() => _SelectedCleaningState();
+}
+
+class _SelectedCleaningState extends State<SelectedCleaning> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -31,21 +36,7 @@ class SelectedCleaning extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CleaningCard(
-                  selectedType: "initial",
-                  title: "Initial Cleaning",
-                  image: "assets/images/img1.png",
-                ),
-                CleaningCard(
-                  selectedType: "upkeep",
-                  title: "Upkeep Cleaning",
-                  image: "assets/images/img2.png",
-                ),
-              ],
-            )
+            CleaningCard(),
           ],
         ),
       ),
