@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:home_cleaning_app/components/cleaning_card.dart';
+import 'package:home_cleaning_app/components/frequecy_card.dart';
 
-class SelectedCleaning extends StatefulWidget {
+class SelectedFrequecy extends StatefulWidget {
   @override
-  _SelectedCleaningState createState() => _SelectedCleaningState();
+  _SelectedFrequecyState createState() => _SelectedFrequecyState();
 }
 
-class _SelectedCleaningState extends State<SelectedCleaning> {
+class _SelectedFrequecyState extends State<SelectedFrequecy> {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20),
         Text(
-          "Selected Cleaning",
+          "Selected Frequecy",
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),
         SizedBox(height: 20),
-        CleaningCard(),
+        FrequecyCard()
       ],
     );
   }

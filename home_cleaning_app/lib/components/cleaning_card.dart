@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:home_cleaning_app/constants.dart';
 
 class CleaningCard extends StatefulWidget {
-  const CleaningCard({
-    Key key,
-  }) : super(key: key);
-
   @override
   _CleaningCardState createState() => _CleaningCardState();
 }
