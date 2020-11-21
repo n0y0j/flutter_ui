@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: purple,
-      appBar: buildAppBar(),
+      appBar: buildAppBar(text: "Your Plan"),
       body: Body(),
     );
   }
