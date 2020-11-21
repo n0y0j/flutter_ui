@@ -1,16 +1,15 @@
-# home_cleaning_app
+# Home Cleaning App
+<br/>
 
-A new Flutter project.
+**Reference this site**
+* https://www.youtube.com/watch?v=tz_Yl4Od1kA
+<br/>
 
-## Getting Started
+## Library Used
 
-This project is a starting point for a Flutter application.
+* table_calendar: ^2.3.0
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+## Design
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/28584258/99878072-385ec580-2c46-11eb-9655-074ae2929567.png" alt="Screenshot_1605963760" width="33%" height="33%" /> <img src="https://user-images.githubusercontent.com/28584258/99878074-3a288900-2c46-11eb-90b4-12e930de9aa8.png" alt="Screenshot_1605963767" width="33%" height="33%" /> <img src="https://user-images.githubusercontent.com/28584258/99878075-3b59b600-2c46-11eb-8a41-cea0a6749172.png" alt="Screenshot_1605963912" width="33%" height="33%" />
