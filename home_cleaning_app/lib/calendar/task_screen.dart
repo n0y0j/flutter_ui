@@ -36,11 +36,11 @@ class TaskWidget extends StatelessWidget {
               Column(
                 children: [
                   dayTask("10 am", "Michael Hamilton", "Upkeep Cleaning", 3,
-                      "\$50"),
+                      "\$50", context),
                   dayTask("11 am", "Alexandra Johnson", "Initial Cleaning", 5,
-                      "\$30"),
-                  dayTask(
-                      "2 pm", "Chris Hemsworth", "Upkeep Cleaning", 2, "\$50"),
+                      "\$30", context),
+                  dayTask("2 pm", "Chris Hemsworth", "Upkeep Cleaning", 2,
+                      "\$50", context),
                 ],
               )
             ],

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:home_cleaning_app/constants.dart';
 
-Row dayTask(String time, String name, String task, int count, String price) {
+Row dayTask(String time, String name, String task, int count, String price,
+    BuildContext context) {
   return Row(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Container(
         padding: EdgeInsets.all(19),
+        width: MediaQuery.of(context).size.width * 0.2,
         child: Text(
           time,
           style: TextStyle(
