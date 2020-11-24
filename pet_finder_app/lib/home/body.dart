@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_finder_app/home/components/newest_pet.dart';
 import 'package:pet_finder_app/home/components/pet_category.dart';
 import 'package:pet_finder_app/home/components/search_bar.dart';
 
@@ -13,7 +14,11 @@ class _BodyState extends State<Body> {
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: Column(
-        children: [SearchBar(), PetCategory()],
+        children: [
+          SearchBar(),
+          PetCategory(),
+          NewestPet(),
+        ],
       ),
     );
   }
