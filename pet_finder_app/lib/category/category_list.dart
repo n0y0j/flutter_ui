@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_finder_app/category/body.dart';
 import 'package:pet_finder_app/components/category_bar.dart';
 import 'package:pet_finder_app/data.dart';
 
@@ -22,6 +23,7 @@ class CategoryList extends StatelessWidget {
             " Category",
         context: context,
       ),
+      body: Body(),
     );
   }
 }
