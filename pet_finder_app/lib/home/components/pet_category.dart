@@ -38,15 +38,19 @@ class PetCategory extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  buildPetCategory(Category.HAMSTER, "56", Colors.orange[200]),
-                  buildPetCategory(Category.CAT, "210", Colors.blue[200]),
+                  buildPetCategory(
+                      Category.HAMSTER, "56", Colors.orange[200], context),
+                  buildPetCategory(
+                      Category.CAT, "210", Colors.blue[200], context),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  buildPetCategory(Category.BUNNY, "90", Colors.green[200]),
-                  buildPetCategory(Category.DOG, "310", Colors.red[200]),
+                  buildPetCategory(
+                      Category.BUNNY, "90", Colors.green[200], context),
+                  buildPetCategory(
+                      Category.DOG, "310", Colors.red[200], context),
                 ],
               ),
             ],
