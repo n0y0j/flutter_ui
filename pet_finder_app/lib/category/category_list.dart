@@ -23,7 +23,9 @@ class CategoryList extends StatelessWidget {
             " Category",
         context: context,
       ),
-      body: Body(),
+      body: Body(
+        category: category,
+      ),
     );
   }
 }
