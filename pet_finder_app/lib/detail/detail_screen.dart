@@ -12,7 +12,7 @@ class PetDetail extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
-      appBar: buildDetailAppbar(),
+      appBar: buildDetailAppbar(context: context),
       body: Body(pet: pet),
     );
   }

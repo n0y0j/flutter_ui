@@ -23,7 +23,7 @@ class CategoryWidget extends StatelessWidget {
         children: getPetList()
             .where((element) => element.category == category)
             .map((item) {
-          return PetWidget(pet: item, index: null);
+          return PetWidget(pet: item, index: null, context: context);
         }).toList(),
       ),
     ));

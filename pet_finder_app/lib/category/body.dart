@@ -12,7 +12,10 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [ConditionFilter(), CategoryWidget(category: category)],
+      children: [
+        ConditionFilter(),
+        CategoryWidget(category: category),
+      ],
     );
   }
 }

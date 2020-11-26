@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-AppBar buildDetailAppbar({String name, BuildContext context}) {
+AppBar buildDetailAppbar({BuildContext context}) {
   return AppBar(
     brightness: Brightness.light,
     backgroundColor: Colors.transparent,
