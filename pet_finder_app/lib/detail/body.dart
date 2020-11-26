@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_finder_app/data.dart';
 import 'package:pet_finder_app/detail/components/home_image.dart';
+import 'package:pet_finder_app/detail/components/pet_feature.dart';
 
 class Body extends StatelessWidget {
   final Pet pet;
@@ -12,6 +13,7 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         DetailImage(pet: pet),
+        PetFeature(pet: pet),
       ],
     );
   }
