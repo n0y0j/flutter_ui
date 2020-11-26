@@ -34,18 +34,18 @@ class NewestPet extends StatelessWidget {
           child: ListView(
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
-            children: buildNewestPet(),
+            children: buildNewestPet(context),
           ),
         )
       ],
     );
   }
 
-  List<Widget> buildNewestPet() {
+  List<Widget> buildNewestPet(BuildContext context) {
     List<Widget> list = [];
     for (var i = 0; i < pets.length; i++) {
       if (pets[i].newest) {
-        list.add(PetWidget(pet: pets[i], index: i));
+        list.add(PetWidget(pet: pets[i], index: i, context: context));
       }
     }
     return list;
