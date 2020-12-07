@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/LoginPage.dart';
 
 class Onboarding extends StatelessWidget {
   @override
@@ -68,7 +69,7 @@ class _onboardingState extends State<onboarding> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: openLoginPage,
                     child: Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 100),
@@ -165,5 +166,10 @@ class _onboardingState extends State<onboarding> {
         color: (currentPage == pageNo) ? Colors.black : Colors.grey,
       ),
     );
+  }
+
+  openLoginPage() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 }
