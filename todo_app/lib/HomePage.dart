@@ -19,6 +19,7 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+  String filterType = "today";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,11 +48,76 @@ class _homePageState extends State<homePage> {
                     onPressed: () {},
                   )
                 ],
+              ),
+              Container(
+                height: 70,
+                color: Color(0xfff96060),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            changeFilter("today");
+                          },
+                          child: Text(
+                            "Today",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Container(
+                          height: 4,
+                          width: 120,
+                          color: (filterType == "today")
+                              ? Colors.white
+                              : Colors.transparent,
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            changeFilter("monthly");
+                          },
+                          child: Text(
+                            "Monthly",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Container(
+                          height: 4,
+                          width: 120,
+                          color: (filterType == "monthly")
+                              ? Colors.white
+                              : Colors.transparent,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           ),
         ],
       ),
     );
+  }
+
+  changeFilter(String filter) {
+    setState(() {
+      filterType = filter;
+    });
   }
 }
