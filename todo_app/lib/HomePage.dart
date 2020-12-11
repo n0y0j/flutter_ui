@@ -23,6 +23,7 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   String filterType = "today";
   DateTime today = new DateTime.now();
+  String taskPop = "close";
   var monthNames = [
     "JAN",
     "FEB",
@@ -161,12 +162,147 @@ class _homePageState extends State<homePage> {
                     ],
                   ),
                 ),
+              ),
+              Container(
+                height: 110,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        height: 90,
+                        width: MediaQuery.of(context).size.width,
+                        color: Color(0xff292e4e),
+                        padding: EdgeInsets.all(20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.check_circle,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "My Task",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.menu,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Menu",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(width: 80),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.content_paste,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Quick",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.account_circle,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Profile",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 25,
+                      left: 0,
+                      right: 0,
+                      child: InkWell(
+                        onTap: openTaskPop,
+                        child: Container(
+                          height: 80,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topRight,
+                              end: Alignment.bottomLeft,
+                              colors: [Color(0xfff96060), Colors.red],
+                            ),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "+",
+                              style: TextStyle(
+                                fontSize: 40,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
         ],
       ),
     );
+  }
+
+  openTaskPop() {
+    setState(() {
+      taskPop = "open";
+    });
+  }
+
+  closeTaskPop() {
+    setState(() {
+      taskPop = "close";
+    });
   }
 
   changeFilter(String filter) {
