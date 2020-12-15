@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:todo_app/CheckList.dart';
+import 'package:todo_app/NewNote.dart';
+import 'package:todo_app/NewTask.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -309,7 +312,7 @@ class _homePageState extends State<homePage> {
                             children: [
                               SizedBox(height: 1),
                               InkWell(
-                                onTap: () {},
+                                onTap: openNewTask,
                                 child: Container(
                                   child: Text(
                                     "Add Task",
@@ -323,7 +326,7 @@ class _homePageState extends State<homePage> {
                                 color: Colors.black.withOpacity(0.2),
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: openNewNote,
                                 child: Container(
                                   child: Text(
                                     "Add Quick Note",
@@ -337,7 +340,7 @@ class _homePageState extends State<homePage> {
                                 color: Colors.black.withOpacity(0.2),
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: openNewCheckList,
                                 child: Container(
                                   child: Text(
                                     "Add Checklist",
@@ -451,5 +454,18 @@ class _homePageState extends State<homePage> {
         ),
       ],
     );
+  }
+
+  openNewTask() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NewTask()));
+  }
+
+  openNewNote() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NewNote()));
+  }
+
+  openNewCheckList() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => CheckList()));
   }
 }
