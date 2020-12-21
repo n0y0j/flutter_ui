@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:todo_app/HomePage.dart';
 
@@ -161,6 +163,88 @@ class _newTaskState extends State<newTask> {
                               ),
                               style: TextStyle(
                                 fontSize: 18,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(15),
+                                bottomLeft: Radius.circular(15),
+                              ),
+                              border: Border.all(
+                                color: Colors.grey.withOpacity(0.5),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Container(
+                                  child: IconButton(
+                                    icon: Icon(
+                                      Icons.attach_file,
+                                      color: Colors.grey,
+                                    ),
+                                    onPressed: () {},
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            color: Colors.grey.withOpacity(0.2),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: "Due Date",
+                                border: InputBorder.none,
+                              ),
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Text(
+                            "Add Member",
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                              color: Colors.grey.withOpacity(0.2),
+                            ),
+                            child: Text(
+                              "Anyone",
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            padding: EdgeInsets.symmetric(vertical: 15),
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(15),
+                              ),
+                              color: Color(0xffff96060),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Add Task",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           )
