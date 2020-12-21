@@ -210,7 +210,7 @@ class _newNoteState extends State<newNote> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Add Task",
+                                  "Add Note",
                                   style: TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
