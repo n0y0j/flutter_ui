@@ -155,14 +155,17 @@ class _newTaskState extends State<newTask> {
                                 color: Colors.grey.withOpacity(0.5),
                               ),
                             ),
-                            child: TextField(
-                              maxLines: 6,
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: "Add description here",
-                              ),
-                              style: TextStyle(
-                                fontSize: 18,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: TextField(
+                                maxLines: 6,
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: "Add description here",
+                                ),
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
                               ),
                             ),
                           ),
